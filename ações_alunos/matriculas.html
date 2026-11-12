@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../enfeinte/matriculas.css">
+        <link rel="shortcut icon" href="../img/sigaicon.png" type="image/x-icon">
+        <title>Matrícula do Aluno | Study</title>
+    </head>
+    <body>
+        <nav class="nave">
+            <img width="175px" src="../img/study_logo.png" class="logo" onclick="window.location.href='../usuario.html'" title="Study | Página Inicial" style="cursor: pointer"/>
+            <div style="align-items: center; display: flex;">
+                <label for="ComboBoxAcessibilidade" style="margin-right: 10px;">Acessibilidade: </label>
+                <select style="padding: 10px; cursor: pointer; margin-right: 10px" id="ComboBoxAcessibilidade" onchange="MudarCordoSiteparaAcessível()">
+                    <option value="...">(nenhum)</option>
+                    <option value="PP">Protanopia e Protanomalia</option>
+                    <option value="DD">Deuteranopia e Deuteranomalia</option>
+                    <option value="TT">Tritanopia e Tritanomalia</option>
+                    <option value="A">Acromatopsia</option>
+                </select>
+                <a onclick="AplicarFiltroInvertido();" style="cursor: pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="48px" width="48px" fill="#ffffff"><path d="M24,42q-6.6,0-11.3-4.58T8,26.25q0-3.3 1.25-6.13T12.7,15.1L24,4L35.3,15.1q2.2,2.2 3.45,5.02T40,26.25q0,6.55-4.67,11.15T24,42Zm0-3V8.2l-9.3,9.15q-1.8,1.8-2.75,4T11,26.25q0,5.35 3.83,9.05T24,39Z"/></svg>
+                </a>
+            </div>
+            <button class="voltar voltei" onclick="history.back()" style="cursor: pointer; margin-right: 15px;">Voltar</button>
+        </nav>
+
+        <section style="margin-top: 90px;">
+            <div class="todos_semestres">
+                <h2 style="margin-bottom: 50px">Realize sua Matrícula</h2>
+                <div class="matricula1">
+                    <p>Primeiro Semestre</p>
+
+                    <input type="checkbox" id="um_1opt">
+                    <label for="um_1opt">Logaritimos</label>
+
+                    <input type="checkbox" id="um_2opt">
+                    <label for="um_2opt">Calculo</label>
+
+                    <input type="checkbox" id="um_3opt">
+                    <label for="um_3opt">Inglês I</label>
+
+                    <input type="checkbox" id="um_4opt">
+                    <label for="um_4opt">HTML</label>
+                </div>
+                <div class="matricula2">
+                    <p>Segundo Semestre</p>
+
+                    <input type="checkbox" id="dois_1opt">
+                    <label for="dois_1opt">Engenharia de Software</label>
+
+                    <input type="checkbox" id="dois_2opt">
+                    <label for="dois_2opt">Economia</label>
+
+                    <input type="checkbox" id="dois_3opt">
+                    <label for="dois_3opt">Banco de Dados</label>
+
+                    <input type="checkbox" id="dois_4opt">
+                    <label for="dois_4opt">Inglês II</label>
+                </div>
+                <div class="matricula3">
+                    <p>Terceiro Semestre</p>
+
+                    <input type="checkbox" id="tres_1opt">
+                    <label for="tres_1opt">Engenharia de Software II</label>
+
+                    <input type="checkbox" id="tres_2opt">
+                    <label for="tres_2opt">C#</label>
+
+                    <input type="checkbox" id="tres_3opt">
+                    <label for="tres_3opt">Sistemas</label>
+
+                    <input type="checkbox" id="tres_4opt">
+                    <label for="tres_4opt">Inglês III</label>
+                </div>
+                <button onclick="RealizarMatrícula()" class="botao">Fazer matrícula</button>
+            </div>
+        </section>
+
+        <footer>
+            <div class="text-rodape">
+                <h1>Study</h1>
+                <p>Sistema de Gestão Escolar</p>
+            </div>
+
+            <b>© Todos os Direitos Reservados. João e José</b>
+        </footer>
+
+        <script src="../mojang/geral.js">
+            function RealizarMatrícula() {
+                let IsConfirmed = confirm("Deseja realmente fazer a rematrícula?");
+
+                if (IsConfirmed) {
+                    alert("Rematrícula feita com êxito!");
+                    location.href = "../usuario.html";
+                }
+            }
+        </script>
+    </body>
+</html>

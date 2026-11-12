@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="../enfeinte/css.css"/>
+        <link rel="icon" type="image/x-icon" href="../img/sigaicon.png"/>
+        <title>Notas do Aluno | Study</title>
+        <style>
+            #tabela td { padding: 5px }
+        </style>
+    </head>
+    <body>
+        <nav class="nave">
+            <img width="175px" src="../img/study_logo.png" class="logo" onclick="window.location.href='../usuario.html'" title="Study | Página Inicial" style="cursor: pointer"/>
+            <div style="align-items: center; display: flex;">
+                <label for="ComboBoxAcessibilidade" style="margin-right: 10px;">Acessibilidade: </label>
+                <select style="padding: 10px; cursor: pointer; margin-right: 10px" id="ComboBoxAcessibilidade" onchange="MudarCordoSiteparaAcessível()">
+                    <option value="...">(nenhum)</option>
+                    <option value="PP">Protanopia e Protanomalia</option>
+                    <option value="DD">Deuteranopia e Deuteranomalia</option>
+                    <option value="TT">Tritanopia e Tritanomalia</option>
+                    <option value="A">Acromatopsia</option>
+                </select>
+                <a onclick="AplicarFiltroInvertido();" style="cursor: pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="48px" width="48px" fill="#ffffff"><path d="M24,42q-6.6,0-11.3-4.58T8,26.25q0-3.3 1.25-6.13T12.7,15.1L24,4L35.3,15.1q2.2,2.2 3.45,5.02T40,26.25q0,6.55-4.67,11.15T24,42Zm0-3V8.2l-9.3,9.15q-1.8,1.8-2.75,4T11,26.25q0,5.35 3.83,9.05T24,39Z"/></svg>
+                </a>
+            </div>
+            <button class="voltar voltei" onclick="history.back()" style="cursor: pointer; margin-right: 15px;">Voltar</button>
+        </nav>
+        
+        <div class="roboto" style="padding: 0; background-color: transparent; text-align: center; margin-top: 110px">
+            <h1 id="title">Notas</h1>
+            <div style="align-items: center; display: flex; justify-content: center;">
+                <table border="1" id="tabela">
+                    <tr><th></th><th>Disciplina 1</th><th>Disciplina 2</th><th>Disciplina 3</th><th>Disciplina 4</th><th>Disciplina 5</th><th>Disciplina 6</th></tr>
+                    <!--* Todas as 6 linhas contendo, cada uma, uma disciplina em função de n *-->
+                    <tr>
+                        <td><abbr style="cursor: help" title="Média da nota nas disciplinas.">Nota</abbr></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                    </tr>
+                    <tr>
+                        <td><abbr style="cursor: help" title="Nota das atividades e dos trabalhos realizados em sala de aula.">Atividades e trabalhos</abbr></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                    </tr>
+                    <tr>
+                        <td><abbr style="cursor: help" title="Nota da primeira avaliação semestral.">Avaliação 1</abbr></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                    </tr>
+                    <tr>
+                        <td><abbr style="cursor: help" title="Nota da segunda avaliação semestral.">Avaliação 2</abbr></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                    </tr>
+                    <tr>
+                        <td><abbr style="cursor: help" title="Nota adquirida ao participar de eventos extracurriculares.">Atividades extracurriculares</abbr></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                    </tr>
+                    <!--* =================================================================== *-->
+                </table>
+            </div>
+        </div>
+
+        <script src="../mojang/geral.js"></script>
+    </body>
+</html>

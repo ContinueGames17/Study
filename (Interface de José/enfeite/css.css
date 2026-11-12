@@ -1,0 +1,66 @@
+/* Classes importadas */
+.roboto {
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+}
+.material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+/* Classes para controles */
+#title, #titulo {
+        color: #45CDE8;
+        font-family: "Roboto", sans-serif;
+}
+#text, #texto {
+        color: #F23A84;
+        font-family: "Roboto", sans-serif;
+}
+nav {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16.5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: auto;
+}
+
+/* Classes customizadas */
+.mainwindow {
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 80px;
+        border-radius: 15px;
+        color: white;
+}
+.hcontainer {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+}
+.hcontainerseparator {
+        width: 2px;
+        height: 40px;
+        background-color: #45CDE8;
+        align-self: center;
+}
+.backgroundtitle {
+        background-color: #45CDE8;
+        font-family: Helvetica, sans-serif;
+}
+.backgroundtext {
+        background-color: #F23A84;
+        font-family: Helvetica, sans-serif;
+}

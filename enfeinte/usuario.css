@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.nave{
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.Logo{
+    flex: 20%;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.menu{
+    flex:70px;
+    text-align: right;
+    padding: 20px;
+}
+
+.menu a{
+    color: #45cde8;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 16px;
+}
+
+.menu a:hover{
+    color: #f23a84;
+    border-bottom: 4px solid #45cde8;
+}
+
+#separar{
+    background-color: #45cde8;
+    padding: 10px 25px;
+    color: black;
+    border-radius: 5px;
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
+#separar:hover{
+    border: none;
+    background-color: #f23a84;
+}
+
+.cranio{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.blocoTexto{
+    flex: 40%;
+    text-align: center;
+    margin-right: 5%;
+    padding: 0;
+    margin: 0;
+}
+
+.blocoTexto h2{
+    font-weight: 900;
+    font-size: 20px;
+    color: #45cde8; 
+}
+
+.blocoTexto p{
+    text-align: center;
+    color: gray;
+}
+
+.blocoImagem{
+    text-align: center;
+    margin-left: 10%;
+    flex: 30%;
+}
+
+section{
+    display: inline-block;
+    margin-top: 80px;
+    padding: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    width: 90%;
+}
+
+section h2{
+    width: 100%;
+    font-size: 50px;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: #45cde8;
+}
+
+.servicos{
+    display: inline-block;
+    margin-top: 5%;
+}
+
+.card{
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    margin: 1%;
+    border: 1px solid #F23A84;
+    border-radius: 10px;
+    transition: scale 0.5s ease;
+}
+
+.card:hover{
+    background-color: #F23A84;
+    color:white;
+    scale: 1.2;
+    cursor: pointer;
+    transition: scale 0.5s ease;
+}
+
+footer{
+    margin-top: 75px;
+    height: 400px;
+    background-image:linear-gradient(180deg, #45cde8, #f23a84);
+    text-align: center;
+    border-top: 5px solid #083981;
+}
+
+.text-rodape{
+    padding:75px;
+    color: white;
+}

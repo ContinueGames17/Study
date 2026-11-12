@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="enfeinte/sobrenos.css">
+        <link rel="shortcut icon" href="img/sigaicon.png" type="image/x-icon">
+        <title>• Sobre nós</title>
+    </head>
+    <body>
+        <!-- BARRA DE NAVEGAÇÃO -->
+        <nav class="barra">
+            <div class="logo"><img width="290px" src="img/study_logo.png" onclick="window.location.href='usuario.html'" title="Study | Página Inicial" style="cursor: pointer"/></div>
+            <div style="align-items: center; display: flex;">
+                <label for="ComboBoxAcessibilidade" style="margin-right: 10px;">Acessibilidade: </label>
+                <select style="padding: 10px; cursor: pointer; margin-right: 10px" id="ComboBoxAcessibilidade" onchange="MudarCordoSiteparaAcessível()">
+                    <option value="...">(nenhum)</option>
+                    <option value="PP">Protanopia e Protanomalia</option>
+                    <option value="DD">Deuteranopia e Deuteranomalia</option>
+                    <option value="TT">Tritanopia e Tritanomalia</option>
+                    <option value="A">Acromatopsia</option>
+                </select>
+                <a onclick="AplicarFiltroInvertido();" style="cursor: pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="48px" width="48px" fill="#505050"><path d="M24,42q-6.6,0-11.3-4.58T8,26.25q0-3.3 1.25-6.13T12.7,15.1L24,4L35.3,15.1q2.2,2.2 3.45,5.02T40,26.25q0,6.55-4.67,11.15T24,42Zm0-3V8.2l-9.3,9.15q-1.8,1.8-2.75,4T11,26.25q0,5.35 3.83,9.05T24,39Z"/></svg>
+                </a>
+            </div>
+            <div class="voltar"><button onclick="history.back()" style="cursor: pointer">Voltar</button></div>
+        </nav>
+
+        <header name="DescriçãodaPlataforma">
+
+            <div class="areaTexto">
+                <!--* TÍTULO *-->
+                <h2 style="letter-spacing: 15px;">Qual é o nosso objetivo</h2>
+                <h2 style="font-size: 80px;">com o Programa Study?</h2>
+                <!--* DESCRIÇÃO *-->
+                <p>
+                    O Study é uma plataforma desenvolvida para simplificar e centralizar a rotina acadêmica de alunos e professores.<br>
+                    Inspirado em sistemas como SIGA e Microsoft Teams, o projeto reúne ferramentas para acompanhamento de notas,<br>
+                    faltas, tarefas, materiais, eventos, avisos e outras atividades acadêmicas em um único ambiente. Nosso objetivo é<br>
+                    proporcionar uma experiência mais intuitiva, organizada e eficiente, facilitando a comunicação e o acesso<br>
+                    às informações dentro da instituição de ensino.<br>
+                </p>
+            </div>
+        </header>
+
+        <footer>
+            <div class="text-rodape">
+                <h1>Study</h1>
+                <p>Sistema de Gestão Escolar</p>
+            </div>
+
+            <b>© Todos os Direitos Reservados. João e José</b>
+        </footer>
+
+        <script src="mojang/geral.js"></script>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="../enfeite/css.css"/>
+        <link rel="icon" type="image/x-icon" href="../enfeite/sigaicon.png"/>
+        <title>Study - Horários</title>
+        <style>
+            #tabela td { padding: 5px }
+            .centeredcontainer {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                width: 100%;
+            }
+            .hcontainerseparator {
+                width: 2px;
+                height: 40px;
+                background-color: #45CDE8;
+                align-self: center;
+            }
+        </style>
+    </head>
+    <body class="roboto">
+        <nav>
+            <img src="../enfeite/siga.png" style="width: 125px" alt="Study | Página Inicial"/>
+        </nav>
+
+        <div style="padding: 0; background-color: transparent; text-align: center">
+            <h1 id="tema">Horários</h1>
+        </div>
+        <div class="centeredcontainer" style="flex-direction: row; align-items: center; text-align: center;">
+            <select id="texto" style="font-size: 17.5px">
+                <option value="...">...</option>
+                <option value="jan">Janeiro</option>
+                <option value="fev">Fevereiro</option>
+                <option value="mar">Março</option>
+                <option value="abr">Abril</option>
+                <option value="mai">Maio</option>
+                <option value="jun">Junho</option>
+                <option value="jul">Julho</option>
+                <option value="ago">Agosto</option>
+                <option value="set">Setembro</option>
+                <option value="out">Outubro</option>
+                <option value="nov">Novembro</option>
+                <option value="dez">Dezembro</option>
+            </select>
+            <div class="hcontainerseparator"></div>
+            <div id="DivHorários">
+                <table border="1">
+                    <tr>
+                        <td>Aqui estará o calendário com os futuros eventos</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <script>
+            var month = Date.Now();
+            alert(month);
+
+            function OnMonthChanged(month) {
+                var divisória = document.GetElementById('DivHorários');
+
+                // campo dedicado às modificações relacionadas ao diretório.
+            }
+        </script>
+    </body>
+</html>

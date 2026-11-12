@@ -1,0 +1,254 @@
+/** Classes importadas **/
+.roboto {
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+}
+.material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+
+
+/** Classes para controles **/
+nav {
+        display: flex;
+        flex-flow: row wrap;
+        background-color: #92e2f1;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+}
+body {
+        transition: filter 0.5s, background-color 0.5s;
+}
+
+
+
+/** Classes para IDs e propriedades específicas **/
+#title, #titulo {
+        color: #45CDE8;
+        font-family: "Roboto", sans-serif;
+}
+#text, #texto {
+        color: #F23A84;
+        font-family: "Roboto", sans-serif;
+}
+a#title,
+a#titulo {
+        color: #45CDE8;
+        font-family: "Roboto", sans-serif;
+        transition: color 0.5s ease;
+}
+a#title:active,
+a#titulo:active {
+        color: #F23A84;
+        font-family: "Roboto", sans-serif;
+        transition: color 0.5s ease;
+}
+a#title:visited,
+a#titulo:visited {
+        color: rgb(198, 76, 235);
+        font-family: "Roboto", sans-serif;
+        transition: color 0.5s ease;
+}
+a#text,
+a#texto {
+        color: #F23A84;
+        font-family: "Roboto", sans-serif;
+        transition: color 0.5s ease;
+}
+a#text:active,
+a#texto:active {
+        color: #45CDE8;
+        font-family: "Roboto", sans-serif;
+        transition: color 0.5s ease;
+}
+a#text:visited,
+a#texto:visited {
+        color: rgb(198, 76, 235);
+        font-family: "Roboto", sans-serif;
+        transition: color 0.5s ease;
+}
+#tabela,
+#tabela td,
+#tabela th {
+        border-color: #F23A84;
+        border-radius: 5px;
+}
+#tabela th {
+        padding-left: 5px;
+        padding-right: 5px;
+}
+*[name="Botão"] {
+        background-color: #45CDE8;
+        color: black;
+        transition: background-color 0.5s ease, color 0.5s ease, scale 0.5s ease;
+}
+*[name="Botão"]:hover {
+        background-color: #F23A84;
+        color: white;
+        scale: 1.2;
+        transition: background-color 0.5s ease, color 0.5s ease, scale 0.5s ease;
+}
+
+
+
+/** Classes customizadas **/
+.mainwindow {
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 80px;
+        border-radius: 15px;
+        color: white;
+}
+.hcontainer {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+}
+.hcontainerseparator {
+        width: 2px;
+        height: 40px;
+        background-color: #45CDE8;
+        align-self: center;
+}
+.backgroundtitle {
+        background-color: #45CDE8;
+        font-family: Helvetica, sans-serif;
+}
+.backgroundtext {
+        background-color: #F23A84;
+        font-family: Helvetica, sans-serif;
+}
+
+
+
+/*! Classes do João !*/
+* {
+        box-sizing: border-box;
+}
+body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+}
+.nave {
+        display: flex;
+        flex-flow: row wrap;
+        background-color: #92e2f1;
+        text-align: center;
+        align-items: center;
+}
+section {
+        display: block;
+        margin-top: 80px;
+        padding: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+        width: 90%;
+}
+section h2 {
+        width: 100%;
+        font-size: 50px;
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        color: #f23a84;
+}
+.nome {
+        display: block;
+        left: 80%;
+        width: 30%;
+        padding: 20px;
+        margin: 1%;
+        margin-right: 40%;
+        margin-left: 35%;
+        border: 1px solid #f23a84;
+        border-radius: 10px;
+}
+.curso {
+        display: block;
+        width: 30%;
+        padding: 20px;
+        margin: 1%;
+        margin-right: 40%;
+        margin-left: 35%;
+        border: 1px solid #f23a84;
+        border-radius: 10px;
+}
+.turno {
+        display: block;
+        width: 30%;
+        padding: 20px;
+        margin: 1%;
+        margin-right: 40%;
+        margin-left: 35%;
+        border: 1px solid #f23a84;
+        border-radius: 10px;
+}
+.unidade {
+        display: block;
+        width: 30%;
+        padding: 20px;
+        margin: 1%;
+        margin-right: 40%;
+        margin-left: 35%;
+        border: 1px solid #f23a84;
+        border-radius: 10px;
+}
+footer{
+        margin-top: 100px;
+        height: 400px;
+        background-image:linear-gradient(180deg, #45cde8, #f23a84);
+        text-align: center;
+        border-top: 5px solid #083981;
+}
+.voltar {
+        text-decoration: none;
+        color: black;
+        text-decoration: none;
+        background-color: #45cde8;
+        padding: 10px 25px;
+        border-radius: 5px;
+        margin-right: 10%;
+        margin-left: 10%;
+        transition: background-color 0.5s ease, color 0.5s ease;
+}
+.voltar:hover {
+        background-color: #f23a84;
+        color: white;
+        transition: background-color 0.5s ease, color 0.5s ease;
+}
+.voltar{
+        margin-right: 10%;
+        margin-left: 5%;
+}
+.voltar button{
+        padding: 15px 30px;
+        border-radius: 5px;
+        background-color: #45cde8;
+        text-decoration: none;
+        color: black;
+}
+.voltar button:hover {
+        background-color: #f23a84;
+        color: white;
+        transition: background-color 0.5s ease, color 0.5s ease;
+}
+button:hover {
+        color: black;
+        background-color: #f23a84;
+        transition: background-color 0.5s ease, color 0.5s ease;
+}

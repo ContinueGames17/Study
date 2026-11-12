@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="../enfeinte/css.css"/>
+        <link rel="icon" type="image/x-icon" href="../img/sigaicon.png"/>
+        <title>Disciplinas do Aluno | Study</title>
+        <style>
+            #tabela td { padding: 5px }
+        </style>
+    </head>
+    <body class="roboto">
+        <nav class="nave">
+            <img width="175px" src="../img/study_logo.png" class="logo" onclick="window.location.href='../usuario.html'" title="Study | Página Inicial" style="cursor: pointer"/>
+            <div style="align-items: center; display: flex;">
+                <label for="ComboBoxAcessibilidade" style="margin-right: 10px;">Acessibilidade: </label>
+                <select style="padding: 10px; cursor: pointer; margin-right: 10px" id="ComboBoxAcessibilidade" onchange="MudarCordoSiteparaAcessível()">
+                    <option value="...">(nenhum)</option>
+                    <option value="PP">Protanopia e Protanomalia</option>
+                    <option value="DD">Deuteranopia e Deuteranomalia</option>
+                    <option value="TT">Tritanopia e Tritanomalia</option>
+                    <option value="A">Acromatopsia</option>
+                </select>
+                <a href="#" onclick="AplicarFiltroInvertido();">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="48px" width="48px" fill="#ffffff"><path d="M24,42q-6.6,0-11.3-4.58T8,26.25q0-3.3 1.25-6.13T12.7,15.1L24,4L35.3,15.1q2.2,2.2 3.45,5.02T40,26.25q0,6.55-4.67,11.15T24,42Zm0-3V8.2l-9.3,9.15q-1.8,1.8-2.75,4T11,26.25q0,5.35 3.83,9.05T24,39Z"/></svg>
+                </a>
+            </div>
+            <button class="voltar voltei" onclick="history.back()" style="cursor: pointer; margin-right: 15px;">Voltar</button>
+        </nav>
+
+        <div style="padding: 0; background-color: transparent; text-align: center; margin-top: 40px">
+            <h1 id="title">
+                Disciplinas
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -1100 1000 1000" width="30px" fill="#45CDE8"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h168q13-36 43.5-58t68.5-22q38 0 68.5 22t43.5 58h168q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm80-80h280v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Zm221.5-198.5Q510-807 510-820t-8.5-21.5Q493-850 480-850t-21.5 8.5Q450-833 450-820t8.5 21.5Q467-790 480-790t21.5-8.5ZM200-200v-560 560Z"/></svg>
+            </h1>
+            <div class="hcontainer" style="gap: 10px">
+                <button name="Botão" onclick="ExibirInformações(this)" id="ef" style="font-size: 15px; padding: 5px 15px; cursor: pointer;">Economia e Finanças</button>
+                <button name="Botão" onclick="ExibirInformações(this)" id="esII" style="font-size: 15px; padding: 5px 15px; cursor: pointer;">Engenharia de Software II</button>
+                <button name="Botão" onclick="ExibirInformações(this)" id="ea" style="font-size: 15px; padding: 5px 15px; cursor: pointer;">Estatística Aplicada</button>
+                <button name="Botão" onclick="ExibirInformações(this)" id="ed" style="font-size: 15px; padding: 5px 15px; cursor: pointer;">Estrutura de Dados</button>
+                <button name="Botão" onclick="ExibirInformações(this)" id="ihc" style="font-size: 15px; padding: 5px 15px; cursor: pointer;">Interação Humano-Computador</button>
+                <button name="Botão" onclick="ExibirInformações(this)" id="iIII" style="font-size: 15px; padding: 5px 15px; cursor: pointer;">Inglês III</button>
+            </div>
+            <div class="hcontainer" id="DivDisciplinas"></div>
+        </div>
+
+        <script src="../mojang/geral.js">
+            function ExibirInformações(botão) {
+                var divisória = document.getElementById("DivDisciplinas");
+                switch (botão.id) {
+                    case "ef":
+                        divisória.innerHTML = `
+                            <table id="tabela" border="1" style="margin-top: 20px;">
+                                <tr>
+                                    <th></th>
+                                    <th>Documentos de aulas</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td>Economia e Finanças</td>
+                                    <td>Curvas da Oferta e da Demanda</td>
+                                    <td><a href="#a" download="Curvas da Oferta e da Demanda.pdf" id="title">Download</a></td>
+                                </tr>
+                            </table>
+                        `;
+                    case "esII":
+                        divisória.innerHTML = `
+                            <table id="tabela" border="1" style="margin-top: 20px;">
+                                <tr>
+                                    <th></th>
+                                    <th>Documentos de aulas</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td>Engenharia de Software II</td>
+                                    <td>Diagrama de Use Case</td>
+                                    <td><a href="#a" download="Diagrama de Caso de Uso.docx" id="title">Download</a></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Caso da Biblioteca</td>
+                                    <td><a href="#a" download="Caso da Biblioteca.pdf" id="title">Download</a></td>
+                                </tr>
+                            </table>
+                        `;
+                    case "ea":
+                        divisória.innerHTML = `
+                            <table id="tabela" border="1" style="margin-top: 20px;">
+                                <tr>
+                                    <th></th>
+                                    <th>Documentos de aulas</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td>Estatística Aplicada</td>
+                                    <td>5 atividades de probabilidade</td>
+                                    <td><a href="#a" download="50 atividades para casa seus troxa kkkk.pdf" id="title">Download</a></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>25 atividades valendo nota - 1º Bimestre</td>
+                                    <td><a href="#a" download="1º Bimestre 3º.pdf" id="title">Download</a></td>
+                                </tr>
+                            </table>
+                        `;
+                    case "ed":
+                        divisória.innerHTML = `
+                            <table id="tabela" border="1" style="margin-top: 20px;">
+                                <tr>
+                                    <th></th>
+                                    <th>Documentos de aulas</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td>Estrutura de Dados</td>
+                                    <td>Noh</td>
+                                    <td><a href="#a" download="Primeiro ano de carro elétrico, meu BYD com único poluente, o que mesmo.pdf" id="title">Download</a></td>
+                                </tr>
+                            </table>
+                        `;
+                    case "ihc":
+                        divisória.innerHTML = `
+                            <table id="tabela" border="1" style="margin-top: 20px;">
+                                <tr>
+                                    <th></th>
+                                    <th>Documentos de aulas</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td>Interação Humano-Computador</td>
+                                    <td>Instruções de Design</td>
+                                    <td><a href="#a" download="Designs.docx" id="title">Download</a></td>
+                                </tr>
+                            </table>
+                        `;
+                    case "iIII":
+                        divisória.innerHTML = `
+                            <table id="tabela" border="1" style="margin-top: 20px;">
+                                <tr>
+                                    <th></th>
+                                    <th>Documentos de aulas</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td>Inglês</td>
+                                    <td>Should, Could and Would Activities</td>
+                                    <td><a href="#a" download="Should, Could, Would.docx" id="title">Download</a></td>
+                                </tr>
+                            </table>
+                        `;
+                }
+            }
+        </script>
+    </body>
+</html>

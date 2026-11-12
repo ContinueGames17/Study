@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="../enfeinte/css.css"/>
+        <link rel="icon" type="image/x-icon" href="../img/sigaicon.png"/>
+        <title>Tarefas do Aluno | Study</title>
+        <style>
+            #tabela td { padding: 5px }
+        </style>
+    </head>
+    <body>
+        <nav class="nave">
+            <img width="175px" src="../img/study_logo.png" class="logo" onclick="window.location.href='../usuario.html'" title="Study | Página Inicial" style="cursor: pointer"/>
+            <div style="align-items: center; display: flex;">
+                <label for="ComboBoxAcessibilidade" style="margin-right: 10px;">Acessibilidade: </label>
+                <select style="padding: 10px; cursor: pointer; margin-right: 10px" id="ComboBoxAcessibilidade" onchange="MudarCordoSiteparaAcessível()">
+                    <option value="...">(nenhum)</option>
+                    <option value="PP">Protanopia e Protanomalia</option>
+                    <option value="DD">Deuteranopia e Deuteranomalia</option>
+                    <option value="TT">Tritanopia e Tritanomalia</option>
+                    <option value="A">Acromatopsia</option>
+                </select>
+                <a onclick="AplicarFiltroInvertido();" style="cursor: pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="48px" width="48px" fill="#ffffff"><path d="M24,42q-6.6,0-11.3-4.58T8,26.25q0-3.3 1.25-6.13T12.7,15.1L24,4L35.3,15.1q2.2,2.2 3.45,5.02T40,26.25q0,6.55-4.67,11.15T24,42Zm0-3V8.2l-9.3,9.15q-1.8,1.8-2.75,4T11,26.25q0,5.35 3.83,9.05T24,39Z"/></svg>
+                </a>
+            </div>
+            <button class="voltar voltei" onclick="history.back()" style="cursor: pointer; margin-right: 15px;">Voltar</button>
+        </nav>
+        
+        <div class="roboto" style="padding: 0; background-color: transparent; text-align: center; margin-top: 110px;">
+            <h1 id="title">
+                Tarefas
+                <!--ÍCONE-->
+            </h1>
+            <div class="hcontainer" style="align-items: center; display: flex; justify-content: center; gap: 10px">
+                <button onclick="ExibirTarefa(this)" name="Botão" id="iII" style="font-size: 15px; padding: 0.5% 0.75%;">Inglês II</button>
+                <button onclick="ExibirTarefa(this)" name="Botão" id="esII" style="font-size: 15px; padding: 0.5% 0.75%;">Engenharia de Software II</button>
+                <button onclick="ExibirTarefa(this)" name="Botão" id="ed" style="font-size: 15px; padding: 0.5% 0.75%;">Estrutura de Dados</button>
+                <button onclick="ExibirTarefa(this)" name="Botão" id="ef" style="font-size: 15px; padding: 0.5% 0.75%;">Economia e Finanças</button>
+                <button onclick="ExibirTarefa(this)" name="Botão" id="ea" style="font-size: 15px; padding: 0.5% 0.75%;">Estatística Aplicada</button>
+                <button onclick="ExibirTarefa(this)" name="Botão" id="soI" style="font-size: 15px; padding: 0.5% 0.75%;">Sistema Operacional I</button>
+                <button onclick="ExibirTarefa(this)" name="Botão" id="ihc" style="font-size: 15px; padding: 0.5% 0.75%;">Interação Humano-Computador</button>
+            </div>
+            <div id="DivisoriadeTarefas" style="align-items: center; display: flex; justify-content: center"></div>
+        </div>
+
+        <script src="../mojang/geral.js">
+            function ExibirTarefa(botão) {
+                var divisória = document.getElementById("DivisoriadeTarefas");
+                switch (botão.id) {
+                    case "iII":
+                        divisória.innerHTML = `
+                            <table id="tabela" border="1" style="margin-top: 20px;">
+                                <tr>
+                                    <th>Matéria</th>
+                                    <th>Tarefa</th>
+                                    <th>Data de Entrega</th>
+                                    <th>Status</th>
+                                </tr>
+                                <tr>
+                                    <td>Inglês II</td>
+                                    <td><a href="#d" target="_blank" id="title">How can we make a good network?</a></td>
+                                    <td>`+ new Date().toLocaleDateString() +`</td>
+                                    <td>Pendente</td>
+                                </tr>
+                            </table>
+                        `;
+                    break;
+                    case "esII":
+                        divisória.innerHTML = `
+                            <table id="tabela" border="1" style="margin-top: 20px;">
+                                <tr>
+                                    <th>Matéria</th>
+                                    <th>Tarefa</th>
+                                    <th>Data de Entrega</th>
+                                    <th>Status</th>
+                                </tr>
+                                <tr>
+                                    <td>Engenharia de Software II</td>
+                                    <td><a href="#d" target="_blank" id="title">Estudo de Caso - Biblioteca</a></td>
+                                    <td>`+ new Date().toLocaleDateString() +`</td>
+                                    <td>Pendente</td>
+                                </tr>
+                            </table>
+                        `;
+                    break;
+                    case "ed":
+                        // Código para exibir tarefas de Estrutura de Dados
+                        divisória.innerHTML = `<label id="text" style="font-weight: bold; font-size: 20px; margin-top: 15px">Não há mais tarefas disponíveis para fazer em Estrutura de Dados.</label>`;
+                    break;
+                    case "ef":
+                        // Código para exibir tarefas de Economia e Finanças
+                        divisória.innerHTML = `<label id="text" style="font-weight: bold; font-size: 20px; margin-top: 15px">Não há mais tarefas disponíveis para fazer em Economia e Finanças.</label>`;
+                    break;
+                    case "ea":
+                        // Código para exibir tarefas de Estatística Aplicada
+                        divisória.innerHTML = `<label id="text" style="font-weight: bold; font-size: 20px; margin-top: 15px">Não há mais tarefas disponíveis para fazer em Estatística Aplicada.</label>`;
+                    break;
+                    case "soI":
+                        // Código para exibir tarefas de Sistema Operacional I
+                        divisória.innerHTML = `<label id="text" style="font-weight: bold; font-size: 20px; margin-top: 15px">Não há mais tarefas disponíveis para fazer em Sistema Operacional I.</label>`;
+                    break;
+                    case "ihc":
+                        // Código para exibir tarefas de Interação Humano-Computador
+                        divisória.innerHTML = `<label id="text" style="font-weight: bold; font-size: 20px; margin-top: 15px">Não há mais tarefas disponíveis para fazer em Interação Humano-Computador.</label>`;
+                    break;
+                }
+            }
+        </script>
+    </body>
+</html>

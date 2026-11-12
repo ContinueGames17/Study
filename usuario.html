@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="enfeinte/usuario.css">
+        <link rel="shortcut icon" href="img/sigaicon.png" type="image/x-icon">
+        <title>Página Inicial do Aluno | Study</title>
+    </head>
+    <body>
+        <!--A classe "nave" se refere a área da barra de navegação, com a logo do site e 3 links-->
+        <nav class="nave">
+            <div class="logo"><img width="290px" src="img/study_logo.png" onclick="window.location.href='usuario.html'" title="Study | Página Inicial" style="cursor: pointer"/></div>
+            <div class="menu"> <!--Div onde se localiza os links de navegação-->
+                <label for="ComboBoxAcessibilidade" style="margin-right: 10px;">Acessibilidade: </label>
+                <select style="padding: 10px; cursor: pointer; margin-right: 10px" id="ComboBoxAcessibilidade" onchange="MudarCordoSiteparaAcessível()">
+                    <option value="...">(nenhum)</option>
+                    <option value="PP">Protanopia e Protanomalia</option>
+                    <option value="DD">Deuteranopia e Deuteranomalia</option>
+                    <option value="TT">Tritanopia e Tritanomalia</option>
+                    <option value="A">Acromatopsia</option>
+                </select>
+                <a href="#IDC">Curso</a>
+                <a href="sobrenos.html">Sobre nós</a>
+                <a href="ações_alunos/matriculas.html">Matrículas</a>
+                <a id="separar" href="ações_alunos/perfil.html">Seu perfil</a> <!--Este botão será separada dos outros-->
+            </div>
+        </nav>
+
+        <!--Classe "cranio" se refere a área onde se encontra o desenho dos estudantes junto com a mensagens de explicação do site-->
+        <header class="cranio">
+            <div class="blocoImagem"><img style="max-width: 118%;" src="img/estudantes-removebg-preview.png"></div>
+            <div class="blocoTexto">
+                <h2 style="letter-spacing: 15px;">Seja Muito Bem-Vindo</h2>
+                <h2 style="font-size: 80px;">Ao Programa Study</h2>
+                <p>
+                    O Study foi desenvolvido com o propósito de facilitar a rotina de estudantes e professores do ambiente
+                    <br>universitário, reunindo, em um só lugar, as principais ferramentas e funcionalidades necessárias para
+                    <br>o dia a dia acadêmico. Nosso objetivo é otimizar o tempo, simplificar o acesso às informações e proporcionar
+                    <br>uma experiência prática, intuitiva e confortável para todos os nossos usuários. Pensamos em cada detalhe
+                    <br>para tornar a jornada acadêmica mais organizada, eficiente e acessível.
+                </p>
+            </div>
+        </header>
+
+        <!--Section se refere a área onde se encontra os cards com a ações dos alunos, como: Tarefa, faltas e etc-->
+        <section>
+            <h2 id="IDC">Informações do seu curso</h2>
+            <div class="servicos">
+                <div class="card" onclick="window.location.href='ações_alunos/notas.html'">
+                    <h3>Notas</h3>
+                    <img width="140px" src="img/Icone Notas.png">
+                    <p>Área dedicada para verificar suas notas de suas matérias do Semestre como: Provas, Trabalhos e Tarefas</p>
+                </div>
+                <div class="card" onclick="window.location.href='ações_alunos/faltas.html'">
+                    <h3>Faltas</h3>
+                    <img width="140px" src="img/Icone Falta.png">
+                    <p>Área dedicada para verificar suas faltas de suas matérias do Semestre como: Faltas, Presenças e Média de Frequençia.</p>
+                </div>
+                <div class="card" onclick="window.location.href='ações_alunos/horários.html'">
+                    <h3>Horário</h3>
+                    <img width="140px" src="img/Icone Hora.png">
+                    <p>Área dedicada para verificar suas aulas das matérias do Semestre como: Data, Horário e Agenda.</p>
+                </div>
+                <div class="card" onclick="window.location.href='ações_alunos/disciplinas.html'">
+                    <h3>Disciplinas</h3>
+                    <img width="140px" src="img/Icone Disciplina.png">
+                    <p>Área dedicada para verificar informações das matérias do Semestre como: Aulas realizadas e Arquivos enviados pelos Professores.</p>
+                </div>
+                <div class="card" onclick="window.location.href='ações_alunos/histórico.html'">
+                    <h3>Histórico</h3>
+                    <img width="140px" src="img/Icone Historioco.png">
+                    <p>Área dedicada para verificar informações do aluno ao decorrer dos Semestres como: Média de nota, Porcentagem de faltas, Ano de conclusão e Status.</p>
+                </div>
+                <div class="card" onclick="window.location.href='ações_alunos/tarefas.html'">
+                    <h3>Tarefas</h3>
+                    <img width="140px" src="img/Icone tarefa.png">
+                    <p>Área dedicada para o envio de tarefas ou trabalhos para uma matéria especifica.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Footer é o Rodapé do site, com a mensagem de Copyrigth-->
+        <footer>
+            <div class="text-rodape">
+                <h1>Study</h1>
+                <p>Sistema de Gestão Escolar</p>
+            </div>
+
+            <b>© Todos os Direitos Reservados. João e José</b>
+        </footer>
+
+        <script src="mojang/geral.js"></script>
+    </body>
+</html>

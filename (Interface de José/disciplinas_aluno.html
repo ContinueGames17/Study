@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="enfeite/css.css"/>
+        <link rel="icon" type="image/x-icon" href="enfeite/sigaicon.png"/>
+        <title>Study - Disciplinas</title>
+        <style>
+            #tabela td { padding: 5px }
+
+            .centeredcontainer {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                width: 100%;
+            }
+            .centeredcontainer button {
+                padding: 10px;
+                cursor: pointer;
+                font-size: 17.5px;
+                transition: filter 0.5s ease;
+            }
+            .centeredcontainer button:hover {
+                filter: brightness(130%);
+                transition: filter 0.5s ease;
+            }
+        </style>
+    </head>
+    <body class="roboto">
+        <nav>
+            <a href="páginainicial_aluno.html" style="padding-left: 10px;"><img src="enfeite/siga.png" title="Study | Página inicial" style="width: 125px;" alt="Study | Página Inicial"/></a>
+            <a href="disciplinas_aluno.html" style="text-decoration: none; padding: 20px">Disciplinas</a>
+            <a href="faltas_aluno.html" style="text-decoration: none; padding: 20px">Faltas</a>
+            <a href="notas_aluno.html" style="text-decoration: none; padding: 20px">Notas</a>
+            <a href="matrícula_aluno.html" style="text-decoration: none; padding: 20px">Matrícula</a>
+            <a href="sobre_nós.html" style="text-decoration: none; padding: 20px; padding-right: 10px;">Sobre nós</a>
+        </nav>
+
+        <div style="padding: 0; background-color: transparent; text-align: center">
+            <h1 id="title">
+                Disciplinas
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -1100 1000 1000" width="30px" fill="#45CDE8"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h168q13-36 43.5-58t68.5-22q38 0 68.5 22t43.5 58h168q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm80-80h280v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Zm221.5-198.5Q510-807 510-820t-8.5-21.5Q493-850 480-850t-21.5 8.5Q450-833 450-820t8.5 21.5Q467-790 480-790t21.5-8.5ZM200-200v-560 560Z"/></svg>
+            </h1>
+            <div class="centeredcontainer" style="flex-direction: row; align-items: center; text-align: center">
+                <button class="backgroundtext">Disciplina 1</button>
+                <button class="backgroundtext">Disciplina 2</button>
+                <button class="backgroundtext">Disciplina 3</button>
+                <button class="backgroundtext">Disciplina 4</button>
+                <button class="backgroundtext">Disciplina 5</button>
+                <button class="backgroundtext">Disciplina 6</button>
+            </div>
+        </div>
+
+        <script>
+            var month = Date.Now();
+            alert(month);
+
+            function OnMonthChanged(month) {
+                var divisória = document.GetElementById('DivHorários');
+
+                // campo dedicado às modificações relacionadas ao diretório.
+            }
+        </script>
+    </body>
+</html>

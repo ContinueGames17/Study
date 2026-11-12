@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="enfeite/css.css"/>
+        <link rel="icon" type="image/x-icon" href="enfeite/sigaicon.png"/>
+        <title>Study - Faltas</title>
+        <style>
+            #tabela td { padding: 5px }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="páginainicial_aluno.html" style="padding-left: 10px;"><img src="enfeite/siga.png" title="Study | Página inicial" style="width: 125px;" alt="Study | Página Inicial"/></a>
+            <a href="disciplinas_aluno.html" style="text-decoration: none; padding: 20px">Disciplinas</a>
+            <a href="faltas_aluno.html" style="text-decoration: none; padding: 20px">Faltas</a>
+            <a href="notas_aluno.html" style="text-decoration: none; padding: 20px">Notas</a>
+            <a href="matrícula_aluno.html" style="text-decoration: none; padding: 20px">Matrícula</a>
+            <a href="sobre_nós.html" style="text-decoration: none; padding: 20px; padding-right: 10px;">Sobre nós</a>
+        </nav>
+        
+        <div class="roboto" style="padding: 0; background-color: transparent; text-align: center;">
+            <h1 id="title">
+                Faltas
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -1100 960 960" width="30px" fill="#45CDE8"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </h1>
+            <div style="align-items: center; display: flex; justify-content: center;">
+                <table border="1" id="tabela">
+                    <tr><th></th><th id="text">Disciplina 1</th><th id="text">Disciplina 2</th><th id="text">Disciplina 3</th><th id="text">Disciplina 4</th><th id="text">Disciplina 5</th><th id="text">Disciplina 6</th></tr>
+                    <!--* Todas as 6 linhas contendo, cada uma, uma disciplina em função de n *-->
+                    <tr>
+                        <td><abbr style="cursor: help" id="text" title="Total de ausências durante o semestre.">Total</abbr></td>
+                        <td><label>1</label></td>
+                        <td><label>0</label></td>
+                        <td><label>0</label></td>
+                        <td><label>0</label></td>
+                        <td><label>0</label></td>
+                        <td><label>0</label></td>
+                    </tr>
+                    <tr>
+                        <td><abbr style="cursor: help" id="text" title="Média, em %, de frequência do aluno.">Média</abbr></td>
+                        <td><label>75%</label></td>
+                        <td><label>100%</label></td>
+                        <td><label>100%</label></td>
+                        <td><label>100%</label></td>
+                        <td><label>100%</label></td>
+                        <td><label>100%</label></td>
+                    </tr>
+                    <tr>
+                        <td><abbr style="cursor: help" id="text" title="Total de ausências justificadas, em %.">Faltas compensadas</abbr></td>
+                        <td><label>25%</label></td>
+                        <td><label>0%</label></td>
+                        <td><label>0%</label></td>
+                        <td><label>0%</label></td>
+                        <td><label>0%</label></td>
+                        <td><label>0%</label></td>
+                    </tr>
+                    <!--
+                        <tr>
+                            <td><abbr style="cursor: help" title="">?</abbr></td>
+                            <td><label></label></td>
+                            <td><label></label></td>
+                            <td><label></label></td>
+                            <td><label></label></td>
+                            <td><label></label></td>
+                            <td><label></label></td>
+                        </tr>
+                        <tr>
+                            <td><abbr style="cursor: help" title="">?</abbr></td>
+                            <td><label></label></td>
+                            <td><label></label></td>
+                            <td><label></label></td>
+                            <td><label></label></td>
+                            <td><label></label></td>
+                            <td><label></label></td>
+                        </tr>
+                    -->
+                    <!--* =================================================================== *-->
+                </table>
+            </div>
+            <input type="submit" onclick="Confirmar()" style="background-color: dodgerblue; color: white; padding: 10px; cursor: pointer; margin-top: 5px; border-radius: 10px;" value="Enviar atestado"/>
+        </div>
+
+        <script>
+            function Confirmar() {
+                let IsConfirmed = confirm("Deseja enviar atestado?");
+
+                if (IsConfirmed) {
+                    alert("A imagem do atestado foi enviada para análise e validação de ausência justificada.");
+                }
+            }
+        </script>
+    </body>
+</html>

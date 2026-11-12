@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="../enfeinte/css.css"/>
+        <link rel="icon" type="image/x-icon" href="../img/sigaicon.png"/>
+        <title>Histórico do Aluno | Study</title>
+        <style>
+            #tabela td { padding: 5px }
+        </style>
+    </head>
+    <body>
+        <nav class="nave">
+            <img width="175px" src="../img/study_logo.png" class="logo" onclick="window.location.href='../usuario.html'" title="Study | Página Inicial" style="cursor: pointer"/>
+            <div style="align-items: center; display: flex;">
+                <label for="ComboBoxAcessibilidade" style="margin-right: 10px;">Acessibilidade: </label>
+                <select style="padding: 10px; cursor: pointer; margin-right: 10px" id="ComboBoxAcessibilidade" onchange="MudarCordoSiteparaAcessível()">
+                    <option value="...">(nenhum)</option>
+                    <option value="PP">Protanopia e Protanomalia</option>
+                    <option value="DD">Deuteranopia e Deuteranomalia</option>
+                    <option value="TT">Tritanopia e Tritanomalia</option>
+                    <option value="A">Acromatopsia</option>
+                </select>
+                <a onclick="AplicarFiltroInvertido();" style="cursor: pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="48px" width="48px" fill="#ffffff"><path d="M24,42q-6.6,0-11.3-4.58T8,26.25q0-3.3 1.25-6.13T12.7,15.1L24,4L35.3,15.1q2.2,2.2 3.45,5.02T40,26.25q0,6.55-4.67,11.15T24,42Zm0-3V8.2l-9.3,9.15q-1.8,1.8-2.75,4T11,26.25q0,5.35 3.83,9.05T24,39Z"/></svg>
+                </a>
+            </div>
+            <button class="voltar voltei" onclick="history.back()" style="cursor: pointer; margin-right: 15px;">Voltar</button>
+        </nav>
+        
+        <div class="roboto" style="padding: 0; background-color: transparent; text-align: center; margin-top: 110px;">
+            <h1 id="title">
+                Histórico
+                <!--ÍCONE-->
+            </h1>
+            <div style="align-items: center; display: flex; justify-content: center;">
+                <table border="1" id="tabela">
+                    <tr><th>1º Semestre</th><th>2º Semestre</th><th>3º Semestre</th><th>4º Semestre</th><th>5º Semestre</th><th>6º Semestre</th></tr>
+                    <!--* Todas as 6 linhas contendo, cada uma, uma disciplina em função de n *-->
+                    <tr>
+                        <td><label>Disciplina 1</label></td>
+                        <td><label>Disciplina A</label></td>
+                        <td><label><a href="" id="title">Inglês II</a></label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Disciplina 2</label></td>
+                        <td><label>Disciplina B</label></td>
+                        <td><label><a href="" id="title">Engenharia de Software II</a></label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Disciplina 3</label></td>
+                        <td><label>Disciplina C</label></td>
+                        <td><label><a href="" id="title">Estrutura de Dados</a></label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Disciplina 4</label></td>
+                        <td><label>Disciplina D</label></td>
+                        <td><label><a href="" id="title">Economia e Finanças</a></label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Disciplina 5</label></td>
+                        <td><label>Disciplina E</label></td>
+                        <td><label><a href="" id="title">Estatística Aplicada</a></label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Disciplina 6</label></td>
+                        <td><label>Disciplina F</label></td>
+                        <td><label><a href="" id="title">Interação Humano-Computador</a></label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                        <td><label>-</label></td>
+                    </tr>
+                    <!--* =================================================================== *-->
+                </table>
+            </div>
+        </div>
+
+        <script src="../mojang/geral.js">
+            function Confirmar() {
+                let IsConfirmed = confirm("Deseja enviar atestado?");
+
+                if (IsConfirmed) {
+                    alert("A imagem do atestado foi enviada para análise e validação de ausência justificada.");
+                }
+            }
+        </script>
+    </body>
+</html>
